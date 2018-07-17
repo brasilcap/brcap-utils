@@ -1,4 +1,4 @@
-const Util = require('../index.js');
+const Util = require('../src/validador.js');
 
 const chai = require('chai');
 const expect = chai.expect;

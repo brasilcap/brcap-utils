@@ -4,15 +4,30 @@
   "description": "Biblioteca utilitária utilizada pela equipe de desenvolvimento da Brasil Cap",
   "main": "index.js",
   "scripts": {
+    "start": "webpack -p --watch",
+    "build": "webpack -p",
     "test": "mocha"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0"
-  },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "bluebird": "^3.5.1",
+    "brcap-aws": "^1.4.4",
     "jsonschema": "^1.2.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "mocha": "^5.2.0",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-node-externals": "^1.7.2"
   }
 }

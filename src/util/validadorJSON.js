@@ -1,5 +1,5 @@
 var Validator = require('jsonschema').Validator;
-var fs = require('fs')
+var fs = require('fs');
 var validator = new Validator();
 
 const BUCKET_SCHEMA = "brasilcap-schema-agreement";
@@ -12,14 +12,14 @@ module.exports = class validadorJSON {
      * @param  {json} payload
      * @param  {callback} callback
      */
-    static validateSchemaSqs(schema,payload, callback) {
-        validateJsonSchema(schema,payload, function (erro, resultado) {
+    static validateSchemaSqs(schema, payload, callback) {
+        validateJsonSchema(schema, payload, function (erro, resultado) {
             callback(erro, resultado);
         });
     };
 
- 
- 
+
+
     /**  validar payload service
      * @param  {} schema
      * @param  {} payload
@@ -27,19 +27,19 @@ module.exports = class validadorJSON {
      * @param  {} httpMethod
      * @param  {} callback
      */
-    static validateSchemaService(schema,payload, resource,httpMethod, callback) {
-        validarArquivo(schema,payload, resource,httpMethod, function (erro, resultado) {
+    static validateSchemaService(schema, payload, resource, httpMethod, callback) {
+        validarArquivo(schema, payload, resource, httpMethod, function (erro, resultado) {
             callback(erro, resultado);
         });
     };
 }
 
 
-function validarArquivo(schema,payload, resource,httpMethod,callback) {
+function validarArquivo(schema, payload, resource, httpMethod, callback) {
 
     if (schema) {
         var schemaValidation = JSON.parse(schema.Body.toString(UTF_8))[resource][httpMethod];
-        
+
         if (schemaValidation) {
             validateJsonSchema(payload, schemaValidation, function (erro, resultado) {
 

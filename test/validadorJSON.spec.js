@@ -1,4 +1,4 @@
-const validadorJSON = require('../util/validadorJSON');
+const validadorJSON = require('../src/util/validadorJSON');
 fs = require('fs');
 const chai = require('chai');
 const expect = chai.expect;

@@ -1,0 +1,7 @@
+.babelrc
+.eslintrc
+src
+*.log
+test
+webpack*
+README.md

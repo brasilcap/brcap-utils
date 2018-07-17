@@ -8,7 +8,7 @@ Biblioteca utilitária utilizada pela equipe de desenvolvimento da Brasil Cap.
 Para desenvolver com esta lib basta rodar o script `npm start`, tudo o que for desenvolvido em `src` e exportado em `index.js` será transpilado para `index.js` já no formato de ES5 em tempo de execução, então bastar manter um `npm link` com o projeto desejado.
 
 ## Deploy
-`npm build` && `npm publish`
+`npm run build` && `npm publish`
 
 ## Exemplos
 
